@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <!-- ! bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- ! main style -->
+    <link rel="stylesheet" href="../css/main style.css">
+    <!-- ! google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <section class="w-75 mx-auto p-5">
+            <h1 class="text-capitalize mb-2 fw-semibold text-center">smart login system</h1>
+            <div class="form-floating my-3">
+                <input type="text" class="form-control" id="userName" oninput="isInputValid(this)" placeholder="enter your name">
+                <label for="userName" class="text-capitalize">enter your name</label>
+                <p class="alert alert-danger p-2 mt-1 d-none">should enter at lest 5 chracters</p>
+            </div>
+            <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="userEmail" oninput="isInputValid(this)" placeholder="enter your email">
+                <label for="userEmail" class="text-capitalize">enter your email</label>
+                <p class="alert alert-danger p-2 mt-1 d-none">should be example@example.com</p>
+            </div>
+            <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="userPassword" oninput="isInputValid(this)" placeholder="enter your Password">
+                <label for="userPassword" class="text-capitalize">enter your Password</label>
+                <p class="alert alert-danger p-2 mt-1 d-none">should enter at lest 8 chracters</p>
+            </div>
+            <p id="message" class="text-danger mb-3 d-none text-center">All input is required</p>
+            <button id="btnSign" onclick="addSignUp()" class="btn btn-outline-info w-100 mb-4 text-capitalize" disabled>sign up</button>
+            <p class="text-capitalize text-white text-center">you have an account? <a href="../index.html">sign in</a></p>
+        </section>
+    </div>
+
+
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
