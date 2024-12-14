@@ -65,9 +65,6 @@ function addStorage(){
 }
 
 function isInputValid(element){
-    let exName = document.querySelector(".exName")
-    let exEmail = document.querySelector(".exEmail")
-    let exPass = document.querySelector(".exPass")
     if(userRegex[element.id].value.test(element.value)==true){
         element.classList.add("is-valid")
         element.classList.remove("is-invalid")
@@ -94,7 +91,7 @@ function canlogin(){
     let user = JSON.parse(localStorage.getItem("user"))
     for(let i = 0 ;i<user.length ;i++){
         if(loginEmail.value.toLowerCase()== user[i].userEmail.toLowerCase()&& loginPassword.value.toLowerCase()== user[i].userPassword.toLowerCase()){
-            location.replace("http://127.0.0.1:5500/pages/logined%20In.html")
+            location.href = "http://127.0.0.1:5500/pages/logined%20In.html"
             let newStorage = localStorage.setItem("new" , JSON.stringify(user[i].userName))
         }else if(loginEmail.value == "" && loginPassword.value == ""){
             document.querySelector("#show").innerHTML = `<p class="text-danger mb-3 text-center">All input is required</p>`
@@ -114,7 +111,7 @@ function clearloginForm(){
 
 // ! loggedin
 function logOut(){
-    location.replace("http://127.0.0.1:5500/index.html")
+    location.herf="http://127.0.0.1:5500/index.html"
 }
 
 function showBtn(){
